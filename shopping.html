@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Romy recommends shopping</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+
+<!-- JavaScript gallery -->
+<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="img/logoRR.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="coffee.html">Coffee</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="food.html">Food</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Shopping</a>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+<div id="myBtnContainer">
+<div class="all">
+  <button class="btn" auto-select="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('breda')"> Breda</button>
+  <button class="btn" onclick="filterSelection('other')"> Other cities</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column breda">
+    <div class="content">
+      <img src="img/hutspotbreda.jpg" alt="breda" style="width:100%">
+      <h4>Hutspot</h4>
+      <p>Hutspot Breda offers a unique combination of timeless fashion, innovative design and local art. Aiming to curate an accessible platform, they provide young designers and artists an opportunity to sell their goods alongside established brands. </p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/lattesandliteraturebreda.jpg" alt="breda" style="width:100%">
+      <h4>Latte's & Literature</h4>
+      <p>In this bookstore/coffee place you will find all genres, from classic and contemporary literature, suspense, non-fiction, poetry, science fiction, fantasy, children's books, young adult, gift books, travel stories, lonely planets, graphic novels, to comics and manga. In addition to English-language literature, we have a diverse selection in Dutch-language cookbooks and offer the option of ordering Dutch-language books.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/dilleenkamillebreda.jpg" alt="breda" style="width:100%">
+      <h4>Dille & Kamille</h4>
+      <p>At Dille & Kamille you will find everything for home, garden and kitchen. Essential basics and delicious gadgets, to spoil yourself or to give as a gift. The pleasure of beautiful tableware, the ease of kitchen tools that fit well in your hand, the seductive scent of herbal tea, the softness of soap. A special touch to an everyday product. That's what makes life enjoyable.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/swanbreda.jpg" alt="breda" style="width:100%">
+      <h4>Swan Breda</h4>
+      <p>Swan Market offers a stage to all those great creatives, who make or design their products with heart and soul. They try to inspire adventurous and conscious shoppers and make them happy with their always innovative products.</p>
+    </div>
+  </div>
+      <div class="column breda">
+    <div class="content">
+      <img src="img/jadorevintagebreda.jpg" alt="breda" style="width:100%">
+      <h4>J'Adore Vintage</h4>
+      <p>Here you can buy 1 kilo of vintage clothing for only €35! All items are carefully inspected and purchased. So you are always assured of quality. The garments are mainly from France, but also from Italy, Scandinavia and America.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/sostrenegrenebreda.jpg" alt="breda" style="width:100%">
+      <h4>Søstrene Grene</h4>
+      <p>At Søstrene Grene they have a special focus on the natural joy and beauty of the little things in life. In these stores you will always find a wide range of products. Many of them they have designed themselves, inspired by their Scandinavian heritage. they believe that beauty is in the details and therefore always have an eye for the importance of the choice of materials and colors.</p>
+    </div>
+  </div>
+    <div class="column other cities">
+    <div class="content">
+      <img src="img/cheapfashionrotterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Cheap Fashion, Rotterdam</h4>
+      <p>You can spend hours browsing through all kinds of clothing to find your perfect outfit. You can find everything here, from beautiful summer dresses, skirts, sweaters and sneakers to kimonos, party dresses and glitter tops.</p>
+    </div>
+  </div>
+      <div class="column other cities">
+    <div class="content">
+      <img src="img/episoderotterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Episode, Rotterdam</h4>
+      <p>Another store that you can't miss as a vintage lover is Episode. You can find this vintage store chain in many major cities.</p>
+    </div>
+  </div>    <div class="column other cities">
+    <div class="content">
+      <img src="img/abcamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>The American Book Centre, Amsterdam</h4>
+      <p>The American Book Center (ABC), an innovative and stubbornly independent English-language book store, has been an institution in Amsterdam for more than 40 years.</p>
+    </div>
+  </div> 
+
+<!-- END GRID -->
+</div>
+<!--- Footer -->
+<footer>
+<div class="row text-center">
+	<div class="col-md-4">
+		<a class= "nav-link" href="index.html"><img src="img/logoRR.png">
+		</a>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>Contact</h5>
+		<hr class="light">
+		<p>Email: mijnietmailen@mailmeniet.com</p>
+		<p>Phone:+31(0)612345678</p>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>My recommendations</h5>
+		<hr class="light">
+		<a class="nav-link" href="coffee.html">Coffee</a>
+		<a class="nav-link" href="food.html">Food</a>
+		<a class="nav-link" href="shopping.html">Shopping</a>
+	</div>
+	<div class="col-12">
+		<hr class="light">
+		<h5>&copy; Romy Recommends</h5>
+
+</div>
+</footer>
+
+
+
+
+</body>
+</html>

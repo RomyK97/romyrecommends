@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Romy recommends coffee</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+	
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="img/logoRR.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="coffee.html">Coffee</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="food.html">Food</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="shopping.html">Shopping</a>
+			</li>
+		</ul>
+
+	</div></div>
+</nav>
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('breda')"> Breda</button>
+  <button class="btn" onclick="filterSelection('tilburg')"> Tilburg</button>
+  <button class="btn" onclick="filterSelection('other')"> Other cities</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column breda">
+    <div class="content">
+      <img src="img/kamubreda.jpg" alt="breda" style="width:100%">
+      <h4>Kamu</h4>
+      <p>A fine place to have a coffee in Breda is Kamu. It is a bicycle store on the Boschstraat that also brews delicious coffees. Or is it a coffee bar where their love of bicycles is shared? You can fill it in yourself. In any case, I think it's a great coffee bar/bicycle shop/bakery in Breda.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/yirgabreda.jpg" alt="breda" style="width:100%">
+      <h4>Yirga</h4>
+      <p>Yirga is an espresso bar in one of the oldest streets in Breda, namely the St. Annastraat. The small, light Yirga has a Scandinavian calm where the openness of the coffee shop is reflected. There is an open kitchen where fresh cakes are baked every day. You can take a seat at the bar while the barista makes your filter coffee. Whether you choose to open your laptop, read newspaper or want to enjoy a cup of coffee with friends, everyone is welcome at Yirga.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/koffiebijteunbreda.jpg" alt="breda" style="width:100%">
+      <h4>Koffie bij Teun</h4>
+      <p>Coffee at Teun is the most famous coffee shop in Breda. The owner Teun (what a coincidence 🤭) started six years ago in a small dark coffee shop. In 2015 he got the chance to open his coffee bar in the renovated shopping center of Breda. "A specialty coffee bar in a mall? You shouldn't want that" many people said to Teun. That's exactly why he did it.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/koffiebarsowiesobreda.jpg" alt="breda" style="width:100%">
+      <h4>Koffiebar Sowieso</h4>
+      <p>They serve the coffees at the bar, with the coffee beans being roasted in Amsterdam itself. For this, the owner Jop drives up and down almost every Monday to roast the fresh beans. And that's always handy, because they know exactly what's at the mill. The coffees are prepared with organic whole milk. Prefer not to use whole milk? No problem, you can also choose soy, oat, almond or coconut milk. Or are you more adventurous? Then order the changing blend and be surprised.</p>
+    </div>
+  </div>
+      <div class="column breda">
+    <div class="content">
+      <img src="img/inspirebreda.jpg" alt="breda" style="width:100%">
+      <h4>Inspire</h4>
+      <p>Get Inspired! With a view on Breda's Grote Markt you can enjoy the tastiest coffee, fresh tea and fresh fruit juices. Do you want to relax on the couch? It is possible at Inspire! Do you want to surf the internet behind your laptop? It is possible at Inspire! Would you like to get today's news from the newspaper? You can at Inspire!
+
+		They import their own different beans and use as their House Blend coffee from Caffenation so you can always enjoy the best quality coffee.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/coffeelabbreda.jpg" alt="breda" style="width:100%">
+      <h4>Coffeelab</h4>
+      <p>Coffeelab Breda is located near the railway station. We know this coffee bar from Coffeelab Eindhoven. In general terms, this coffee bar is similar to the one in Eindhoven: delicious coffee, green oasis, local products and lots of seats. Whether you want to catch the train with a coffee, or you enjoy your coffee in the bar. Coffeelab makes your coffee with love!</p>
+    </div>
+  </div>
+  <div class="column tilburg">
+    <div class="content">
+      <img src="img/mrmorristilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Mr Morris</h4>
+      <p>Mr.Morris is the ultimate mix of a juice, coffee bar and healthy lunchroom in the Dwaalgebied of Tilburg. Their menu includes responsible and healthy fresh juices, unique sandwiches, salads and coffee specialties. They only work with high quality fresh ingredients, mostly organic and fair trade. Moreover, all their products are homemade. An experienced barista prepares your coffee with specialty coffee beans from Lucifer Coffee Roasters. At the same time they prepare your juice and food at the bar within minutes. For a healthy breakfast, lunch, juice or a delicious coffee in Tilburg, Mr.Morris is the place to be.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/buutvrijtilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Buutvrij</h4>
+      <p>With a perfect long table set up for 'the laptoppers' you can work great here. There is fast internet, good coffee and you sit in the sun. You don't have to sit at the long table, but between 12:00 and 14:00, because of the crowds at lunch. There are many students working there, either working on a project or pouring your coffee. This makes this bar a bit studentish. Oh well ... you're also in a student city. So enjoy!</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/localstilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Locals</h4>
+      <p>Locals bestaat al méér dan vijf jaar en is daarmee de koploper in specialty coffee van Tilburg. De eigenaren, Rachel & Shenol, hebben een mooi pand aan de Heuvelstraat omgetoverd tot een koffiebar. Het is een plek waar een huiselijke sfeer hangt, chillend in de schommelstoel of onderuit gezakt bij het grote raam. Het is je ‘Home away from home’!</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/stoom013tilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Stoom013</h4>
+      <p>In 2017, Bob and Lukas opened a coffee shop: Stoom013. It is a special location in Tilburg, namely the Spoorzone. It is a hodgepodge of businesses, creative entrepreneurs and fun new hotspots. It is about a 10 minute walk from Central Station. Hidden behind the Hall of Fame of the Cultuurfabriek, you will find the old train carriage of Stoom013: a coffee bar that is a must in Tilburg! Upon entering it is soon clear that your coffee comes from Bocca. On the menu you can read more about the coffee.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/beansandbitestilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Beans & Bites</h4>
+      <p>Beans & Bites is a New York style Coffeebar - Take Away, where high quality, competitive prices and an enthusiastic, guest-oriented attitude are key.
+	You can come to them in the early morning for Italian espresso-based coffees or a top quality filter coffee.
+
+	In addition to coffee, they also serve classics such as croissants and chocolate rolls and we prepare freshly made sandwiches on the spot.
+	Fancy an American style brownie, carrot cake or a piece of homemade date-cranberry coconut cake?</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/lunchcafenieuwlandtilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Lunchcafé Nieuwland</h4>
+      <p>Do you feel like a good coffee with a piece of traditional pie, a relaxed breakfast or a delicious lunch in the most cozy and special neighborhood in Tilburg? Or are you looking for a cosy place to have a drink? Then Lunchcafé Nieuwland is the place to be.</p>
+    </div>
+  </div>
+    <div class="column other cities">
+    <div class="content">
+      <img src="img/manmetbrilkoffierotterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Man met Bril Koffie, Rotterdam</h4>
+      <p>Man met Bril has anyway managed to get hold of a unique building, namely one of the arches of the Hofplein line. This area is in full development and a coffee bar is a must. It brings people from the neighborhood together and it also attracts other people to the neighborhood. Besides the coffee bar, you can also take a look at how the different coffees are roasted. In fact, you can't miss it, the roaster is at the heart of the coffee bar!</p>
+    </div>
+  </div>
+      <div class="column other cities">
+    <div class="content">
+      <img src="img/coffeeandcoconutsamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Coffee & Coconuts, Amsterdam</h4>
+      <p>Like coffee? Like coconuts? Then you’ll love this airy De Pijp eatery housed inside a former 1920s cinema. The breathtaking art deco building has been lovingly converted into a hip, multi-level hangout with stripped back Scandinavian décor, and a laid back atmosphere ideal for long, lazy brunches, afternoon drinks and stylish evenings.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/boccaamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Bocca Coffee, Amsterdam</h4>
+      <p>Man met Bril has anyway managed to get hold of a unique building, namely one of the arches of the Hofplein line. This area is in full development and a coffee bar is a must. It brings people from the neighborhood together and it also attracts other people to the neighborhood. Besides the coffee bar, you can also take a look at how the different coffees are roasted. In fact, you can't miss it, the roaster is at the heart of the coffee bar!</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/hometowndenhaag.jpg" alt="other cities" style="width:100%">
+      <h4>Hometown, The Hague</h4>
+      <p>You can still expect excellent coffee, of course, but there's more! Start your day at Hometown with a full breakfast. Bowls, buttery brioche or banana bread? Or are you more into oatmeal and French toast? They have it all!
+
+		Their baristas are eager to pour your favorite coffee. Enjoy a slow brew V60 Filter, a Chemex coffee or go for shot Monin syrup. Don't like coffee? What the heck! Hometown has a great selection of fresh teas, hot chocolate, and specialty smoothies.</p>
+    </div>
+  </div>  
+  <div class="column other cities">
+     <div class="content">
+      <img src="img/filtrodenhaag.jpg" alt="other cities" style="width:100%">
+      <h4>Filtro, The Hague</h4>
+      <p>This coffee bar is located in the historic center of The Hague. Start your morning here with a coffee before you go shopping or take a long walk. They have international coffee roasters on the menu, such as The Barn and Five Elephant from Berlin.</p>
+    </div>
+  </div>  
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/broeiutrecht.jpg" alt="other cities" style="width:100%">
+      <h4>Broei, Utrecht</h4>
+      <p>At BROEI, they work as much as possible with local and small-scale farmers, brewers, roasters and growers. For dairy and more, they work with the Lindenhoff. For vegetables, fruits and herbs with the Lindenhoff and De Groentenakker. The fair trade coffee comes from the guys at KEEN.
+
+	Their kitchen revolves around vegetables. Lots and lots of vegetables. They are constantly innovating and discovering and creating new dishes (some of which are vegan). And we put our heart and soul into it. 
+
+	Their drinks are as much as possible direct trade, local or from smaller entrepreneurs. they also make a lot ourselves like the kombucha, the Iranian sekanjabin and the iced tea.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/zwartwitkoffieeindhoven.jpg" alt="other cities" style="width:100%">
+      <h4>ZwartWit Koffie, Eindhoven</h4>
+      <p>Black and White is located in an up-and-coming downtown neighborhood called Victoria. And let it just be located in a renovated Philips building, YELLOW! The industrial part and the perfect sun terrace on the south makes this a top location for a coffee shop. It is not a coffee shop where you want to work, the vibe is too relaxed for that. So close your laptop and enjoy your coffee.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/coffeelabeindhoven.jpg" alt="other cities" style="width:100%">
+      <h4>Coffeelab, Eindhoven</h4>
+      <p>On September 1, 2020, they opened their doors at Eindhoven Station in the former restaurant. The iconic spot with monumental status is a stone's throw away from where the COFFEELAB adventure started: the Stationsplein. The new start on the second floor of the station felt like coming home. 
+
+	At this location, you can go for your daily cup(s) of coffee, both to go and to stay, for an extensive breakfast and lunch menu, but also for all-day brunch and cocktail boards. The following applies to our range of products: if we can make it ourselves, then we will! From home-made lemonade to our own banana bread.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/borgmanleiden.jpg" alt="other cities" style="width:100%">
+      <h4>Borgman & Borgman, Leiden</h4>
+      <p>Borgman Borgman is a coffee shop in Leiden on the Nieuwe Rijn. The love for coffee has been over since 2013 and they have been roasting their own coffee beans ever since. The lovely terrace on the canal invites you to enjoy a cup of coffee with the morning sunshine at this fun coffee shop.</p>
+    </div>
+  </div>    
+
+
+<!-- END GRID -->
+</div>
+
+
+<!--- Footer -->
+<footer>
+<div class="row text-center">
+	<div class="col-md-4">
+		<a class= "nav-link" href="index.html"><img src="img/logoRR.png">
+		</a>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>Contact</h5>
+		<hr class="light">
+		<p>Email: mijnietmailen@mailmeniet.com</p>
+		<p>Phone:+31(0)612345678</p>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>My recommendations</h5>
+		<hr class="light">
+		<a class="nav-link" href="coffee.html">Coffee</a>
+		<a class="nav-link" href="food.html">Food</a>
+		<a class="nav-link" href="shopping.html">Shopping</a>
+	</div>
+	<div class="col-12">
+		<hr class="light">
+		<h5>&copy; Romy Recommends</h5></div>
+
+</div>
+</footer>
+
+
+
+
+</body>
+</html>

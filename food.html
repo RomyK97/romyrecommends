@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Romy recommends food</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+
+<!-- JavaScript gallery -->
+<script>
+		filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="img/logoRR.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="coffee.html">Coffee</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Food</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="shopping.html">Shopping</a>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('breda')"> Breda</button>
+  <button class="btn" onclick="filterSelection('tilburg')"> Tilburg</button>
+  <button class="btn" onclick="filterSelection('other')"> Other cities</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column breda">
+    <div class="content">
+      <img src="img/puickbreda.jpg" alt="breda" style="width:100%">
+      <h4>Puick</h4>
+      <p>At PuiCk everything is about enjoyment and experience. Our lunch business, which is also open for dinner on Friday & Saturday evenings, serves dishes from many different countries & continents .  
+	The lunch menu consists of small and large dishes so that you can taste many flavors. 
+	If you feel like a "slow lunch" you can choose the "PuiCke Parade", a collection of small dishes.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/boterhalbreda.jpg" alt="breda" style="width:100%">
+      <h4>Boterhal</h4>
+      <p>De Boterhal in Breda is an international tapas restaurant, specialty beer bar and wine bar. One can enjoy lunch, drinks and dinner with us.Besides the food they serve, they also have a lot of beers and wines. Besides the beers on the menu they have changing beers; five kettle beers and five seasonal beers.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/gaudimbreda.jpg" alt="breda" style="width:100%">
+      <h4>Gaudim</h4>
+      <p>Catalan food and drink, that is enjoyment. Of beautiful dishes, honest ingredients and pure flavors. Of everything between mountain and sea, 'muntanya y mar', as the Catalans say. And also of a relaxed atmosphere, good company, real gastronomy and craftsmanship. Catalan enjoyment, that is Gaudím.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/tigerclubbreda.jpg" alt="breda" style="width:100%">
+      <h4>The Tiger Club</h4>
+      <p>The Tiger Club in Breda, they like to introduce you to the best Asian street food dishes, oriental beers and spicy cocktails. Why? Because they are good at it and they love to share their love for Asia with you.</p>
+    </div>
+  </div>
+      <div class="column breda">
+    <div class="content">
+      <img src="img/baoasiankitchenbreda.jpg" alt="breda" style="width:100%">
+      <h4>Bao Asian Kitchen</h4>
+      <p>Bao Asian Kitchen is an Asian restaurant located on Van Coothplein. It serves authentic Asian shared dining dishes like bao dimsum, spring rolls, satay and Peking duck. Are you a fan of sushi? Then order one of the many chef's special rolls or choose the sushi & sashimi boat with your tablemates. In addition, the restaurant serves various noodle, wok and rice dishes with meat, fish.</p>
+    </div>
+  </div>
+    <div class="column breda">
+    <div class="content">
+      <img src="img/bobbisbarbreda.jpg" alt="breda" style="width:100%">
+      <h4>Bobbi's Bar</h4>
+      <p>At Bobbi's Bar, everything is about enjoyment and experience. The prominent bar is an eye-catcher and creates a relaxed atmosphere. During the day there is a choice of 'lunch dishes' sandwiches and salads. The dinner menu features a variety of meat, fish and vegetarian dishes. But also for pizzas, chicken from the rotisserie, dishes to share and an extensive choice of cocktails you are at the right place at Bobbi's Bar.</p>
+    </div>
+  </div>
+  <div class="column tilburg">
+    <div class="content">
+      <img src="img/lunchcafenieuwlandtilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Lunchcafé Nieuwland</h4>
+      <p>Do you feel like a good coffee with a piece of traditional pie, a relaxed breakfast or a delicious lunch in the most cozy and special neighborhood in Tilburg? Or are you looking for a cosy place to have a drink? Then Lunchcafé Nieuwland is the place to be.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/smeermtilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Smeer'm</h4>
+      <p>At Smeer 'm you can go for the tastiest lunch dishes and coffee. On the menu, there is enough choice for everyone. There is even been thought about the doubters. After opening hours, drinks or dinners can also be organized at this great location.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/mrmorristilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Mr Morris</h4>
+      <p>Mr.Morris is the ultimate mix of a juice, coffee bar and healthy lunchroom in the Dwaalgebied of Tilburg. Their menu includes responsible and healthy fresh juices, unique sandwiches, salads and coffee specialties. They only work with high quality fresh ingredients, mostly organic and fair trade. Moreover, all their products are homemade. An experienced barista prepares your coffee with specialty coffee beans from Lucifer Coffee Roasters. At the same time they prepare your juice and food at the bar within minutes. For a healthy breakfast, lunch, juice or a delicious coffee in Tilburg, Mr.Morris is the place to be.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/donstilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Dons Noodle Shop</h4>
+      <p>At Don’s Noodle Shop you get real good Asian food. Expect dishes inspired by Japan, China, Malaysia, Indonesia and Thailand. Don’s Noodle Shop was intended as a take-out restaurant, but many people enjoy to eat their dishes in the small restaurant in the city center of Tilburg. They offer vegan options as well!</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/wagontilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Eetbar de Wagon</h4>
+      <p>De Wagon is een eetcafé voor foodlovers dat zich bevindt in twee treinstellen uit 1930 tegenover de noordzijde van het station in Tilburg. Met de Wagon willen ze een spoor achterlaten. Of dit nu een herinnering is aan het eten dat ze serveren, de unieke eigen wijnen die ze schenken of de beleving die ze achterlaten wanneer je een feestje geeft.</p>
+    </div>
+  </div>
+    <div class="column tilburg">
+    <div class="content">
+      <img src="img/xunoodlebartilburg.jpg" alt="tilburg" style="width:100%">
+      <h4>Xu Noodle Bar</h4>
+      <p>Xu Noodle Bar is a family-owned business. They are specialized in freshmade noodles and homemade broth, inspired by their generations-old family recipe. Their mission is to bring together the Western and Chinese culture by providing delicious food and the concept of shared dining. Rice, noodle soups, fried noodles, dumplings, bao buns, bubble tea, they have it all!</p>
+    </div>
+  </div>
+    <div class="column other cities">
+    <div class="content">
+      <img src="img/ramenkingdomamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Ramen Kingdom, Amsterdam</h4>
+      <p>Ramen-Kingdom is everything you want from a ramen restaurant and more! When entering they will great you in Japanese as if were actually in Japan. The interior is a copy of the average ramen restaurant in Tokyo, including the toilet! The food is as authentic as it gets, if you consider yourself a ramen lover you should go here. At least once a week!</p>
+    </div>
+  </div>
+      <div class="column other cities">
+    <div class="content">
+      <img src="img/moakamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Moak Pancakes, Amsterdam</h4>
+      <p>Their philosophy is pretty simple. they are in love with great food. The juiciest juices. their vibe is mellow urban. Starring mostly yesterday's hip-hop and back-in-the-day. And they offer all that with their dedicated style of generous hospitality. Fo real! Btw: Moak associates for them with Mokum. Amsterdam, that is.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/veganjunkfoodbaramsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Vegan Junk Food Bar, Amsterdam</h4>
+      <p>Vegan Junk Food Bar is an award-winning concept that’s on a mission to create a positive impact on animal, environmental and human welfare.
+
+		From the growing urge to create a place where everyone could enjoy Vegan Junk Food together. Our first VJFB opened up in 2017 in the monumental westside of Amsterdam, rapidly followed up by four (and counting) additional VJFB restaurants throughout the Netherlands.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/dimsumnowamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Dim Sum Now, Amsterdam</h4>
+      <p>When you walk into Dim Sum Now, you are immediately overwhelmed by the delicious smell of "baskets of steamy goodness," as their neon lights so eloquently say. Everything at Dim Sum Now is made fresh, and the dim sum are offered in convenient mixes. Choose a few dim sum for a light meal or go for the Disco Dim Sum of 20 to share (or, if you're really hungry, to just eat it yourself).</p>
+    </div>
+  </div>   
+   <div class="column other cities">
+    <div class="content">
+      <img src="img/tedsbrunchutrecht.jpg" alt="other cities" style="width:100%">
+      <h4>Teds all day brunch, Utrecht</h4>
+      <p>What makes them special is that they travel the world for inspiration for their dishes. Teds is accessible, cool and honest and describes itself best as a cozy living room where you can enjoy lunch, brunch and work of course. For me it is the perfect place to settle down with my laptop and phone. Besides coffee and tea there are also cocktails, wine and snacks to start off your evening.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/bikfrietwerkdenhaag.jpg" alt="other cities" style="width:100%">
+      <h4>Bik Frietwerk, The Hague</h4>
+      <p>They think fries. Dream fries. And, not unimportantly for you, bake it. At BIK, you'll find artisan fries that will make you lick your fingers. You must try their garlic fries and sweet potato fries. Are you a french fry lover? Then their toppings are not to be resisted so delicious. All recipes are prepared every day with fresh ingredients. You can choose delicious meaty toppings, but the veggie options are definitely worth the detour as well.</p>
+    </div>
+  </div>   
+   <div class="column other cities">
+    <div class="content">
+      <img src="img/littlevrotterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Little V, Rotterdam</h4>
+      <p>Diner at Little V is about getting to know the culture of the south- Vietnamese cuisine. The history of the nation has left a rich mark on the dinning culture. With influences reaching from China to Indonesia and even France, the Vietnamese cuisine combines the best of all! The use of ginger, lemongrass, lots of fresh herbs and peppers gives the food its complex flavors. This all makes for healthy, flavorful and well-priced food.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/gefliptamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Geflipt, Amsterdam</h4>
+      <p>Geflipt is a cozy and real Amsterdam eatery, specializing in the best burgers. At Geflipt you eat the best burgers and enjoy a delicious (special) beer, cocktail or wine in a relaxed atmosphere. Their chefs lovingly prepare fresh toppings and sauces every morning to give each burger the real Geflipt taste. Moreover, they work as much as possible with local suppliers who deliver their quality products fresh to us. This guarantees the quality and optimizes the taste of their burgers, and is also sustainable for people, animals and the environment.</p>
+    </div>
+  </div>    
+  <div class="column other cities">
+    <div class="content">
+      <img src="img/happyhappyjoyjoyamsterdam.jpg" alt="other cities" style="width:100%">
+      <h4>Happy Happy Joy Joy, Amsterdam</h4>
+      <p>At Happyhappyjoyjoy the most delicious Asian dishes are on the menu. Like of course the Dim Sum! Steamed and fried. Highly recommended: the Ngap Chew! With peking duck, shrimp and bamboo shoot. But not only is the food super tasty here; there is also a great atmosphere in the restaurants in Amsterdam West and at the Oostelijke Handelskade! Thanks to the striking red interior and red umbrellas hanging from the ceiling. Ideal for a Dim Sum Night Out with friends (or your lover of course)!</p>
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+<!--- Footer -->
+<footer>
+<div class="row text-center">
+	<div class="col-md-4">
+		<a class= "nav-link" href="index.html"><img src="img/logoRR.png">
+		</a>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>Contact</h5>
+		<hr class="light">
+		<p>Email: mijnietmailen@mailmeniet.com</p>
+		<p>Phone:+31(0)612345678</p>
+	</div>
+	<div class="col-md-4">
+		<hr class="light">
+		<h5>My recommendations</h5>
+		<hr class="light">
+		<a class="nav-link" href="coffee.html">Coffee</a>
+		<a class="nav-link" href="food.html">Food</a>
+		<a class="nav-link" href="shopping.html">Shopping</a>
+	</div>
+	<div class="col-12">
+		<hr class="light">
+		<h5>&copy; Romy Recommends</h5>
+
+</div>
+</footer>
+
+
+
+
+</body>
+</html>
